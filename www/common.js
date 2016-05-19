@@ -57,7 +57,8 @@ ln.APP = {
     YANDEX: "yandex",
     UBER: "uber",
     TOMTOM: "tomtom",
-    BING_MAPS: "bing_maps"
+    BING_MAPS: "bing_maps",
+	SYGIC: "sygic"
 };
 
 /**
@@ -71,7 +72,8 @@ ln.APPS_BY_PLATFORM[ln.PLATFORM.ANDROID] = [
     ln.APP.CITYMAPPER,
     ln.APP.UBER,
     ln.APP.WAZE,
-    ln.APP.YANDEX
+    ln.APP.YANDEX,
+	ln.APP.SYGIC
 ];
 ln.APPS_BY_PLATFORM[ln.PLATFORM.IOS] = [
     ln.APP.USER_SELECT,
@@ -83,7 +85,8 @@ ln.APPS_BY_PLATFORM[ln.PLATFORM.IOS] = [
     ln.APP.TRANSIT_APP,
     ln.APP.YANDEX,
     ln.APP.UBER,
-    ln.APP.TOMTOM
+    ln.APP.TOMTOM,
+	ln.APP.SYGIC
 ];
 ln.APPS_BY_PLATFORM[ln.PLATFORM.WINDOWS] = [
     ln.APP.BING_MAPS
@@ -106,6 +109,7 @@ ln.APP_NAMES[ln.APP.YANDEX] = "Yandex Navigator";
 ln.APP_NAMES[ln.APP.UBER] = "Uber";
 ln.APP_NAMES[ln.APP.TOMTOM] = "Tomtom";
 ln.APP_NAMES[ln.APP.BING_MAPS] = "Bing Maps";
+ln.APP_NAMES[ln.APP.SYGIC] = "Sygic";
 
 /**
  * All possible transport modes

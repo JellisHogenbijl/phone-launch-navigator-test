@@ -73,6 +73,7 @@
         <string>yandexnavi</string>
         <string>uber</string>
         <string>tomtomhome</string>
+		<string>sygic</string>
       </array>
     </config-file>
   </platform>
