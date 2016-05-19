@@ -12,8 +12,8 @@
   <engines>
     <engine name="cordova" version=">=4.0.0" />
   </engines>
-  <repo>https://github.com/dpa99c/phonegap-launch-navigator.git</repo>
-  <issue>https://github.com/dpa99c/phonegap-launch-navigator/issues</issue>
+  <repo>https://github.com/JellisHogenbijl/phone-launch-navigator-test.git</repo>
+  <issue>https://github.com/JellisHogenbijl/phone-launch-navigator-test/issues</issue>
 
   <license>MIT</license>
   <keywords>cordova,phonegap,ios,android,windows,navigation,navigator</keywords>
