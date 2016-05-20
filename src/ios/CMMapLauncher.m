@@ -34,7 +34,39 @@
 
 + (NSString *)urlPrefixForMapApp:(CMMapApp)mapApp {
 	dispatch_async(dispatch_get_main_queue(), ^{
-		NSString *message = [NSString stringWithFormat:@"Installed: %@ %@", [CMMapLauncher isMapAppInstalled:mapApp], mapApp];
+		NSString *mapName = @"";
+		switch (mapApp) {
+			case CMMapAppCitymapper:
+				*mapName = @"Citymapper";
+
+			case CMMapAppGoogleMaps:
+				*mapName = @"GoogleMaps";
+
+			case CMMapAppNavigon:
+				*mapName = @"Navigon";
+
+			case CMMapAppTheTransitApp:
+				*mapName = @"TheTransitApp";
+
+			case CMMapAppWaze:
+				*mapName = @"Waze";
+
+			case CMMapAppYandex:
+				*mapName = @"Yandex";
+
+			case CMMapAppUber:
+				*mapName = @"Uber";
+				
+			case CMMapAppTomTom:
+				*mapName = @"TomTom";
+			
+			case CMMapAppSygic:
+				*mapName = @"Sygic";
+
+			default:
+				*mapName = @"Nothing";
+		}
+		NSString *message = [NSString stringWithFormat:@"Installed: %s %s", [CMMapLauncher isMapAppInstalled:mapApp] ? @"yes" : @"no", mapName];
 		NSString *title = @"Map app installed";
 		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
 		[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
