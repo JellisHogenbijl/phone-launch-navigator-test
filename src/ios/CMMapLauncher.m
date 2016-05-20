@@ -37,43 +37,52 @@
 		NSString *mapName = @"";
 		switch (mapApp) {
 			case CMMapAppCitymapper:
-				*mapName = @"Citymapper";
+				mapName = @"Citymapper";
 				break;
 			case CMMapAppGoogleMaps:
-				*mapName = @"GoogleMaps";
+				mapName = @"GoogleMaps";
 				break;
 
 			case CMMapAppNavigon:
-				*mapName = @"Navigon";
+				mapName = @"Navigon";
 				break;
 
 			case CMMapAppTheTransitApp:
-				*mapName = @"TheTransitApp";
+				mapName = @"TheTransitApp";
 				break;
 
 			case CMMapAppWaze:
-				*mapName = @"Waze";
+				mapName = @"Waze";
 				break;
 
 			case CMMapAppYandex:
-				*mapName = @"Yandex";
+				mapName = @"Yandex";
 				break;
 
 			case CMMapAppUber:
-				*mapName = @"Uber";
+				mapName = @"Uber";
 				break;
 				
 			case CMMapAppTomTom:
-				*mapName = @"TomTom";
+				mapName = @"TomTom";
 				break;
 			
 			case CMMapAppSygic:
-				*mapName = @"Sygic";
+				mapName = @"Sygic";
 				break;
 
 			default:
-				*mapName = @"Nothing";
+				mapName = @"Nothing";
 		}
+		NSString *message = [NSString stringWithFormat:@"Installed: %s %s", [CMMapLauncher isMapAppInstalled:mapApp] ? @"yes" : @"no", mapName];
+		NSString *title = @"Map app installed";
+		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+		[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+		}]];
+
+		[[[[UIApplication sharedApplication] keyWindow] rootViewController] presentViewController:alertController animated:YES completion:^{
+		}];
 	});
 
 
