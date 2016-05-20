@@ -33,7 +33,14 @@
 @implementation CMMapLauncher
 
 + (NSString *)urlPrefixForMapApp:(CMMapApp)mapApp {
-	
+	NSString *message = [NSString stringWithFormat:@"Installed: %f %f", [CMMapLauncher isMapAppInstalled:mapApp], mapApp];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Map app installed" 
+                                                message:[NSString stringWithFormat:@"Installed: %f %f", [CMMapLauncher isMapAppInstalled:mapApp], mapApp]
+                                               delegate:nil 
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil];
+	[alert show];
+	[alert release];
 
 
     switch (mapApp) {
