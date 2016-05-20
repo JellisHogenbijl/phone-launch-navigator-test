@@ -38,30 +38,38 @@
 		switch (mapApp) {
 			case CMMapAppCitymapper:
 				*mapName = @"Citymapper";
-
+				break;
 			case CMMapAppGoogleMaps:
 				*mapName = @"GoogleMaps";
+				break;
 
 			case CMMapAppNavigon:
 				*mapName = @"Navigon";
+				break;
 
 			case CMMapAppTheTransitApp:
 				*mapName = @"TheTransitApp";
+				break;
 
 			case CMMapAppWaze:
 				*mapName = @"Waze";
+				break;
 
 			case CMMapAppYandex:
 				*mapName = @"Yandex";
+				break;
 
 			case CMMapAppUber:
 				*mapName = @"Uber";
+				break;
 				
 			case CMMapAppTomTom:
 				*mapName = @"TomTom";
+				break;
 			
 			case CMMapAppSygic:
 				*mapName = @"Sygic";
+				break;
 
 			default:
 				*mapName = @"Nothing";
