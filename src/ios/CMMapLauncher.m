@@ -34,7 +34,7 @@
 
 + (NSString *)urlPrefixForMapApp:(CMMapApp)mapApp {
 	dispatch_async(dispatch_get_main_queue(), ^{
-		NSString *message = [NSString stringWithFormat:@"Installed: %f %f", [CMMapLauncher isMapAppInstalled:mapApp], mapApp];
+		NSString *message = [NSString stringWithFormat:@"Installed: %@ %@", [CMMapLauncher isMapAppInstalled:mapApp], mapApp];
 		NSString *title = @"Map app installed";
 		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
 		[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
