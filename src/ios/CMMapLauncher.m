@@ -74,15 +74,6 @@
 			default:
 				*mapName = @"Nothing";
 		}
-		NSString *message = [NSString stringWithFormat:@"Installed: %@ %s", [CMMapLauncher isMapAppInstalled:mapApp] ? @"yes" : @"no", mapName];
-		NSString *title = @"Map app installed";
-		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-		[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-
-		}]];
-
-		[[[[UIApplication sharedApplication] keyWindow] rootViewController] presentViewController:alertController animated:YES completion:^{
-		}];
 	});
 
 
