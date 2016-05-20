@@ -227,7 +227,7 @@
         url = [NSString stringWithFormat:@"tomtomhome:geo:action=navigateto&lat=%f&long=%f&name=%@", end.coordinate.latitude, end.coordinate.longitude, [end.name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
         return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
     } else if(mapApp == CMMapAppSygic) {
-		NSString *url = [NSString stringWithFormat:@"com.sygic.aura://coordinate|%f|%f|drive", end.coordinate.latitude, end.coordinate.longitude];
+		NSString *url = [NSString stringWithFormat:@"com.sygic.aura://coordinate|%f|%f|drive", end.coordinate.longitude, end.coordinate.latitude];
         return [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 	}
     return NO;

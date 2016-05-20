@@ -690,7 +690,7 @@ public class LaunchNavigator extends CordovaPlugin {
 			String logMsg = "Using Sygic to navigate to";
 			if(!isNull(destLatLon)){
                 String[] parts = splitLatLon(destLatLon);
-                url += ""+parts[0]+"|"+parts[1]+"|drive";
+                url += ""+parts[1]+"|"+parts[0]+"|drive";
                 logMsg += " ["+destLatLon+"]";
 			}
 			
