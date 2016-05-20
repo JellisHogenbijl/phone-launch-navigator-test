@@ -34,13 +34,13 @@
 
 + (NSString *)urlPrefixForMapApp:(CMMapApp)mapApp {
 	NSString *message = [NSString stringWithFormat:@"Installed: %f %f", [CMMapLauncher isMapAppInstalled:mapApp], mapApp];
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Map app installed" 
-                                                message:[NSString stringWithFormat:@"Installed: %f %f", [CMMapLauncher isMapAppInstalled:mapApp], mapApp]
-                                               delegate:nil 
-                                      cancelButtonTitle:@"OK"
-                                      otherButtonTitles:nil];
-	[alert show];
-	[alert release];
+	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Map app installed" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+
+    }]];
+
+    [[[[UIApplication sharedApplication] keyWindow] rootViewController] presentViewController:alertController animated:YES completion:^{
+    }];
 
 
     switch (mapApp) {
