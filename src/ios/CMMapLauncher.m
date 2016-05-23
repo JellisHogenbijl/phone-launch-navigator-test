@@ -86,12 +86,12 @@
 		
 		
 		NSString *message1 = mapName;
-		UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message1 preferredStyle:UIAlertControllerStyleAlert];
-		[alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+		UIAlertController *alertController1 = [UIAlertController alertControllerWithTitle:title message:message1 preferredStyle:UIAlertControllerStyleAlert];
+		[alertController1 addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
 		}]];
 
-		[[[[UIApplication sharedApplication] keyWindow] rootViewController] presentViewController:alertController animated:YES completion:^{
+		[[[[UIApplication sharedApplication] keyWindow] rootViewController] presentViewController:alertController1 animated:YES completion:^{
 		}];
 	});
 
